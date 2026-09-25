@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "skill_version": "0.1.0",
+  "protocol_version": "0.1.0",
+  "directories": [
+    "docs",
+    "docs/design",
+    "docs/system_design",
+    "docs/implementation",
+    "docs/information",
+    "docs/information/raw_materials",
+    "docs/information/external_information",
+    "docs/information/investigations",
+    "docs/information/playground",
+    "docs/evaluation",
+    "docs/evaluation/philosophy",
+    "docs/evaluation/design",
+    "docs/evaluation/system_design",
+    "docs/evaluation/implementation"
+  ],
+  "files": {
+    "AGENTS.md": "77f0bfd5e3d06700393f4879969bcc2127a38ed01a1dbb3a938960c7881c0923",
+    "README.md": "aef277fb6a70a89681a85e1b6d23f44ee2a6cc58490f9f5c95fc99db6d2d3542",
+    "docs/OVERVIEW.md": "875dce0e99707525fd7cb06b8691ff5d783ef8e115ebd47164885edb2e40c905",
+    "docs/PHILOSOPHY.md": "8070e0aea35700779800a1e8eeefdc75727b1777d17ec7d94c36f9248546e81f",
+    "docs/ARCHITECTURE.md": "2e7cb38229f7877e569cc05dd9c8fb71b30954ad2c9978328d69f5d377f81505",
+    "docs/ROADMAP.md": "eae710439b6ab1e8e034479e4785fddf64058bbe4b746003e659498e618ae760",
+    "docs/DECISION.md": "2054f311cdbb52242d940bccc583a2d2c2762239b13c93fa3fa90749f29d19b5",
+    "docs/DEVLOG.md": "47559711bea3d5d84c5b0a3dd37329381f3e92db3fee35c9547cb902ed826d58",
+    "docs/TODO.md": "0e478b525adbeeb1b1de7674e1a00353d1d75eee666537ff0c1c13d3187322fe"
+  }
+}
