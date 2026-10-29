@@ -1,5 +1,7 @@
 # MukiDoc
 
+> English version: [mukidoc](https://github.com/mukimasta/mukidoc)
+
 让项目自己保存意图、设计与实现上下文，使人和 AI 能够持续协作。
 
 ### 初始化项目
