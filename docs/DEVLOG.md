@@ -73,7 +73,5 @@
 
 2. 明确人与 AI 的书写梯度：越上层越由人亲自设计和书写，越下层越交给 AI 完成。PHILOSOPHY、OVERVIEW 与 README 据此更新，README 增加与记忆系统、规格驱动开发和约定文件的对比。
 
-3. 将“拥有全局视角的 AI 判断更好”记为待验证的 Philosophy 层承诺，建立 global_view Evaluation，目前只有非正式证据。
-
-4. 中文仓库 mukidoc-zh 与英文仓库 mukidoc 以 v0.1.0 公开发布，中文版为唯一源头。
+3. 中文仓库 mukidoc-zh 与英文仓库 mukidoc 以 v0.1.0 公开发布，中文版为唯一源头。
 
