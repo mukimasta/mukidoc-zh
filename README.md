@@ -2,9 +2,9 @@
 
 > English version: [mukidoc](https://github.com/mukimasta/mukidoc)
 
-为长期、复杂的项目设计的文档协议：让项目自己保存理念、决策与设计，使人和 AI 能够持续协作。
+**为大型项目设计的结构化文档协议。**
 
-AI 让代码越来越便宜，真正稀缺的是项目的理念、决策和方向。MukiDoc 把它们按 Design → System Design → Implementation 分层保存在项目里：越上层越由人亲自设计，越下层越交给 AI 落实。AI 因此掌握的不只是零散的记忆，而是项目的全局；协议也让它知道每种知识该放在哪里，长期保持文档清晰整洁。
+MukiDoc 用结构化的文档保存项目理念、项目架构、项目路线等高层次的项目上下文，以及 Design → System Design → Implementation 三个层级的核心设计链文档。MukiDoc 的协议为这些文档规定了清晰的结构，AI 依据协议掌握项目的全局，并在编写代码的同时维护文档，使其始终保持清晰、优雅和整洁。
 
 ### 与其他方案的区别
 
