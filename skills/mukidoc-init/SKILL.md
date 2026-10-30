@@ -2,7 +2,7 @@
 name: mukidoc-init
 description: 初始化或补齐项目的 MukiDoc 固定目录与骨架文档，安装随包提供的 AGENTS.md，并识别旧版协议以便由用户决定是否更新。用于用户要求初始化、接入、补齐 MukiDoc 骨架或更新 MukiDoc 协议；不负责重写项目知识、旧文档迁移或日常开发。
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # MukiDoc 初始化

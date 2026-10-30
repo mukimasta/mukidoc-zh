@@ -19,8 +19,8 @@ MukiDoc 中的文档应优先追求清晰、自然和高信息密度。文档首
 9. 尽量不使用例子。文档应直接、完整地描述真实规则和状态；只有当场景本身就是所需信息，或抽象内容无法在不失真的情况下表达时，才使用具体示例。
 10. 文档命名：全大写，单词间用下划线连接。
 
-基础骨架必须存在：仓库根目录的 README.md、AGENTS.md，以及 docs/ 下的 OVERVIEW.md、PHILOSOPHY.md、ARCHITECTURE.md、ROADMAP.md、DECISION.md、DEVLOG.md、TODO.md 均为固定文档。初始化或迁移时补齐缺失项，已有内容保留；暂时没有内容时可以只保留标题，不编造正文。文件存在不等于内容已完成。
+基础骨架必须存在：仓库根目录的 README.md、AGENTS.md，以及 mukidoc/ 下的 OVERVIEW.md、PHILOSOPHY.md、ARCHITECTURE.md、ROADMAP.md、DECISION.md、DEVLOG.md、TODO.md 均为固定文档。初始化或迁移时补齐缺失项，已有内容保留；暂时没有内容时可以只保留标题，不编造正文。文件存在不等于内容已完成。
 
-固定目录包括 docs/、三层设计链、Information 及其四个分类目录、Evaluation 及其四个承诺来源目录，即使为空也需保留。Git 项目使用 `.gitkeep` 保留空目录。Area、具体设计文档、Evaluation Suite，以及 DATA_MODEL.md、RUNTIME.md、TECH_STACK.md、API.md 等可选文档仍按需创建。
+固定目录包括 mukidoc/、三层设计链、Information 及其四个分类目录、Evaluation 及其四个承诺来源目录，即使为空也需保留。Git 项目使用 `.gitkeep` 保留空目录。根目录用专属的 mukidoc/，`docs/` 留给项目自己按惯例使用。Area、具体设计文档、Evaluation Suite，以及 DATA_MODEL.md、RUNTIME.md、TECH_STACK.md、API.md 等可选文档仍按需创建。
 
 具体文档类型可以进一步规定自己的结构、篇幅和写作方式，但默认继承这些原则。

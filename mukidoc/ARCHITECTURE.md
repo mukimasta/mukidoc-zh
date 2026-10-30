@@ -177,14 +177,14 @@ sequenceDiagram
 
 ## 文件结构
 
-基础目录和骨架文档固定建立并保留，即使暂时为空。根目录 README.md、AGENTS.md 与 docs 下七份 Project Context 文档为固定文件；三层设计链、Information 的四类目录及 Evaluation 的四个承诺来源目录为固定入口。Area、具体设计文档和标注可选的文件按需创建。MukiCheck 尚未落地，不纳入当前初始化要求。
+基础目录和骨架文档固定建立并保留，即使暂时为空。根目录 README.md、AGENTS.md 与 mukidoc 下七份 Project Context 文档为固定文件；三层设计链、Information 的四类目录及 Evaluation 的四个承诺来源目录为固定入口。Area、具体设计文档和标注可选的文件按需创建。MukiCheck 尚未落地，不纳入当前初始化要求。
 
 ```text
 /
 ├── README.md
 ├── AGENTS.md
 │
-├── docs/
+├── mukidoc/
 │   ├── OVERVIEW.md
 │   ├── PHILOSOPHY.md
 │   ├── ARCHITECTURE.md

@@ -8,7 +8,7 @@ MukiDoc 用结构化的文档保存项目理念、项目架构、项目路线等
 
 ### 初始化项目
 
-仓库提供 `skills/mukidoc-init/`，包含初始化 Skill、脚本与完整协议模板。Skill 与协议的首个版本均为 **0.1.0**。
+仓库提供 `skills/mukidoc-init/`，包含初始化 Skill、脚本与完整协议模板。Skill 与协议的当前版本均为 **0.2.0**。
 
 直接从本仓库运行，要求 Python 3.9+，无需第三方依赖：
 
@@ -22,9 +22,9 @@ python3 skills/mukidoc-init/scripts/init_mukidoc.py /path/to/project
 
 ### 了解与开发
 
-1. [项目概览](docs/OVERVIEW.md)、[核心思想](docs/PHILOSOPHY.md)、[整体架构](docs/ARCHITECTURE.md)。
-2. 初始化设计链：[Design](docs/design/deliverable/BOOTSTRAP.md) → [System Design](docs/system_design/BOOTSTRAP.md) → [Implementation](docs/implementation/BOOTSTRAP.md)。
-3. [初始化评价与验证](docs/evaluation/design/bootstrap/EVALUATION.md)、[开发历史](docs/DEVLOG.md)。
+1. [项目概览](mukidoc/OVERVIEW.md)、[核心思想](mukidoc/PHILOSOPHY.md)、[整体架构](mukidoc/ARCHITECTURE.md)。
+2. 初始化设计链：[Design](mukidoc/design/deliverable/BOOTSTRAP.md) → [System Design](mukidoc/system_design/BOOTSTRAP.md) → [Implementation](mukidoc/implementation/BOOTSTRAP.md)。
+3. [初始化评价与验证](mukidoc/evaluation/design/bootstrap/EVALUATION.md)、[开发历史](mukidoc/DEVLOG.md)。
 
 维护协议与验证资源包：
 

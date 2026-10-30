@@ -54,22 +54,22 @@ class BootstrapTests(unittest.TestCase):
         for name in ("README", "AGENTS"):
             self.assertTrue((self.project / (name + ".md")).is_file())
         for name in ("OVERVIEW", "PHILOSOPHY", "ARCHITECTURE", "ROADMAP", "DECISION", "DEVLOG", "TODO"):
-            self.assertTrue((self.project / "docs" / (name + ".md")).is_file())
+            self.assertTrue((self.project / "mukidoc" / (name + ".md")).is_file())
         for directory in ("design", "system_design", "implementation",
                           "information/raw_materials", "information/external_information",
                           "information/investigations", "information/playground",
                           "evaluation/philosophy", "evaluation/design",
                           "evaluation/system_design", "evaluation/implementation"):
-            self.assertTrue((self.project / "docs" / directory / ".gitkeep").is_file())
+            self.assertTrue((self.project / "mukidoc" / directory / ".gitkeep").is_file())
         self.assertEqual((self.project / "AGENTS.md").read_bytes(), TEMPLATE)
-        self.assertFalse((self.project / "docs/evaluation/mukicheck").exists())
+        self.assertFalse((self.project / "mukidoc/evaluation/mukicheck").exists())
         for name in ("DATA_MODEL.md", "RUNTIME.md", "TECH_STACK.md", "API.md"):
             self.assertEqual(list(self.project.rglob(name)), [])
 
     def test_repeat_run_preserves_bytes_and_modification_times(self):
         self.run_init()
         (self.project / "README.md").write_bytes(b"User README\r\n")
-        (self.project / "docs/TODO.md").write_bytes(b"")
+        (self.project / "mukidoc/TODO.md").write_bytes(b"")
         before = snapshot(self.project)
         result = self.run_init()
         self.assertEqual(snapshot(self.project), before)
@@ -88,7 +88,7 @@ class BootstrapTests(unittest.TestCase):
         after = snapshot(self.project)
         for path, value in before.items():
             self.assertEqual(after[path], value)
-        self.assertTrue((self.project / "docs/TODO.md").is_file())
+        self.assertTrue((self.project / "mukidoc/TODO.md").is_file())
 
     def test_preview_does_not_create_missing_target_or_parent(self):
         self.project = self.base / "not-yet-created" / "project"
@@ -142,7 +142,7 @@ class BootstrapTests(unittest.TestCase):
         before = snapshot(self.project)
         self.run_init("--update-agent", expected_code=1)
         self.assertEqual(snapshot(self.project), before)
-        self.assertFalse((self.project / "docs").exists())
+        self.assertFalse((self.project / "mukidoc").exists())
 
     def test_file_changed_after_review_is_not_replaced(self):
         old = versioned("0.0.1")
@@ -166,7 +166,7 @@ class BootstrapTests(unittest.TestCase):
         self.write_agent(original)
         self.run_init("--update-agent", "--expected-agent-sha256", digest(original), expected_code=1)
         self.assertEqual((self.project / "AGENTS.md").read_bytes(), original)
-        self.assertFalse((self.project / "docs").exists())
+        self.assertFalse((self.project / "mukidoc").exists())
 
     def test_preview_of_approved_update_does_not_write_backup(self):
         old = versioned("0.0.1")
@@ -179,7 +179,7 @@ class BootstrapTests(unittest.TestCase):
 
     def test_conflicting_directory_blocks_all_creation(self):
         self.project.mkdir()
-        (self.project / "docs").write_text("This is not a directory\n")
+        (self.project / "mukidoc").write_text("This is not a directory\n")
         before = snapshot(self.project)
         self.run_init(expected_code=1)
         self.assertEqual(snapshot(self.project), before)
@@ -189,7 +189,7 @@ class BootstrapTests(unittest.TestCase):
         outside = self.base / "outside"
         outside.mkdir()
         self.project.mkdir()
-        (self.project / "docs").symlink_to(outside, target_is_directory=True)
+        (self.project / "mukidoc").symlink_to(outside, target_is_directory=True)
         result = self.run_init(expected_code=1)
         self.assertIn("symlink", result["error"])
         self.assertEqual(list(outside.iterdir()), [])
@@ -205,7 +205,7 @@ class BootstrapTests(unittest.TestCase):
     def test_corrupt_bundle_refuses_before_creating_target(self):
         detached = self.base / "damaged skill"
         shutil.copytree(SKILL, detached)
-        (detached / "assets/template/docs/TODO.md").write_text("Corrupted template")
+        (detached / "assets/template/mukidoc/TODO.md").write_text("Corrupted template")
         result = self.run_init(script=detached / "scripts/init_mukidoc.py", expected_code=1)
         self.assertIn("checksum mismatch", result["error"])
         self.assertFalse(self.project.exists())

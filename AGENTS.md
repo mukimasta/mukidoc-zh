@@ -1,6 +1,6 @@
 # MukiDoc Agent Protocol
 
-<!-- MukiDoc protocol version: 0.1.0 -->
+<!-- MukiDoc protocol version: 0.2.0 -->
 
 ## Role
 
@@ -24,12 +24,14 @@
 
 ### 项目地图
 
-仓库根目录的 `README.md` 面向使用者，承担展示、上手和导航；根目录的 `AGENTS.md` 是 Agent 工作协议。正式项目知识放在 `docs/` 中：
+仓库根目录的 `README.md` 面向使用者，承担展示、上手和导航；根目录的 `AGENTS.md` 是 Agent 工作协议。正式项目知识放在 `mukidoc/` 中：
 
 1. Project Context：`OVERVIEW.md`、`PHILOSOPHY.md`、`ARCHITECTURE.md`、`ROADMAP.md`、`DECISION.md`、`DEVLOG.md`、`TODO.md`，分别保存项目定义、思想基础、整体结构、长期演进、关键判断过程、开发历史和当前行动。
 2. Design Chain：`design/`、`system_design/`、`implementation/`，分别保存对象设计、内部系统机制和当前具体工程实现。
 3. Information：`information/`，保存原始材料、外部信息、调查证据和探索内容，与 Project Context 并列。
 4. Evaluation：`evaluation/`，保存当前项目自身承诺的评价目标、方法、标准及判断。
+
+`mukidoc/` 只保存 MukiDoc 的项目知识。`docs/` 不属于 MukiDoc，项目面向使用者的文档、文章或文档站等可以按惯例放在那里，与 `mukidoc/` 并存。
 
 下面列出必须建立并保留的基础目录和骨架文档。初始化或迁入 MukiDoc 时，即使暂时没有内容，也应补齐全部骨架；它们提供稳定的知识入口。源码、测试、脚本等继续使用适合当前项目的工程结构。
 
@@ -37,7 +39,7 @@
 /
 ├── README.md
 ├── AGENTS.md
-└── docs/
+└── mukidoc/
     ├── OVERVIEW.md
     ├── PHILOSOPHY.md
     ├── ARCHITECTURE.md
@@ -60,7 +62,7 @@
         └── implementation/
 ```
 
-固定骨架与按需内容分开处理：根目录 README.md、AGENTS.md，docs 下七份 Project Context 文档，以及上图列出的全部目录必须存在。暂缺内容的骨架文档可只保留标题，不能为了填满文件编造事实、决定或待办；文件存在不代表内容已完成。空目录在 Git 项目中使用 `.gitkeep` 保留，它不属于项目知识文档。
+固定骨架与按需内容分开处理：根目录 README.md、AGENTS.md，mukidoc 下七份 Project Context 文档，以及上图列出的全部目录必须存在。暂缺内容的骨架文档可只保留标题，不能为了填满文件编造事实、决定或待办；文件存在不代表内容已完成。空目录在 Git 项目中使用 `.gitkeep` 保留，它不属于项目知识文档。
 
 各层内部的 Area、具体设计文档、Evaluation Suite，以及 `DATA_MODEL.md`、`RUNTIME.md`、`TECH_STACK.md`、`API.md` 等可选文档仍按需创建。检查结构时，固定骨架缺失应报告并补齐；可选内容缺失不自动构成问题。
 
@@ -228,7 +230,7 @@ Evaluation 判断项目各层做出的承诺是否成立，并把结果反馈到
 
 ### Evaluation 的组织与证据
 
-项目自身的评价按承诺来源放在 `docs/evaluation/philosophy/`、`design/`、`system_design/`、`implementation/` 下。每个独立主题建立 `<layer>/<evaluation_name>/EVALUATION.md`，至少写清：
+项目自身的评价按承诺来源放在 `mukidoc/evaluation/philosophy/`、`design/`、`system_design/`、`implementation/` 下。每个独立主题建立 `<layer>/<evaluation_name>/EVALUATION.md`，至少写清：
 
 1. Claim：验证什么承诺。
 2. Scope：覆盖什么范围。
@@ -237,7 +239,7 @@ Evaluation 判断项目各层做出的承诺是否成立，并把结果反馈到
 
 承诺来源与 Scope 是两个独立维度。Scope 可以是 Module、Integration、System / End-to-End 或 Long-term；高层承诺可由低层证据支撑，低层问题也可能需要大范围运行才能发现。只有存在真实差异时才拆分范围或场景，简单 Suite 保持一个文件即可。
 
-`docs/evaluation/` 保存目标、方法、标准和可追溯的判断，执行代码放在自然的工程位置，可使用 tests、evals、benchmarks、scripts、CI、Agent task、人工评价或真实使用结果。结果需要说明对应证据、运行条件和适用范围，缺少证据的部分保持未验证。
+`mukidoc/evaluation/` 保存目标、方法、标准和可追溯的判断，执行代码放在自然的工程位置，可使用 tests、evals、benchmarks、scripts、CI、Agent task、人工评价或真实使用结果。结果需要说明对应证据、运行条件和适用范围，缺少证据的部分保持未验证。
 
 Playground 用于探索未知，Tests 检查已明确的行为和实现约束，Evaluation 综合测试、实验、运行和其他证据判断承诺。测试通过只是相应范围的证据，不能直接替代价值或长期效果的评价。
 

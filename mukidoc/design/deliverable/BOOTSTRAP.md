@@ -4,7 +4,7 @@ Bootstrap 为新项目或已有项目建立 MukiDoc 的固定知识入口。用�
 
 ### 初始化结果
 
-根目录 README.md、AGENTS.md，docs 下七份 Project Context 文档，以及三层设计链、Information 四个分类、Evaluation 四个承诺来源的目录均须存在。固定文档暂时没有内容时只保留标题，空目录需要能够随项目保存。Area、具体设计文档、Evaluation Suite 和可选文件不预建；尚未落地的 MukiCheck 不纳入初始化。
+根目录 README.md、AGENTS.md，mukidoc 下七份 Project Context 文档，以及三层设计链、Information 四个分类、Evaluation 四个承诺来源的目录均须存在。固定文档暂时没有内容时只保留标题，空目录需要能够随项目保存。Area、具体设计文档、Evaluation Suite 和可选文件不预建；尚未落地的 MukiCheck 不纳入初始化。
 
 已有文件保留原样，包括已存在但为空的骨架文档。重复初始化只补缺失项，不重写正文、不清理已有内容。初始化不生成项目事实，不推断意图，不将已有代码自动转成设计承诺。
 

@@ -61,7 +61,7 @@ evaluation/
 
 ### Evaluation 与执行
 
-`docs/evaluation/` 保存评价目标、方法和判断标准，不要求执行代码与文档放在一起。
+`mukidoc/evaluation/` 保存评价目标、方法和判断标准，不要求执行代码与文档放在一起。
 
 真正产生证据的内容应放在最自然的工程位置，可以是 tests、evals、benchmarks、scripts、CI、Agent task、人工评价或真实使用结果。
 
